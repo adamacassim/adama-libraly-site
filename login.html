@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - Adama Library</title>
+    <title>Adama Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+    <h1>Adama Library 📚</h1>
+</header>
+
 <div class="container">
-    <h2>Login 🔐</h2>
 
-    <input type="text" id="contact" placeholder="Enter Email or Phone"><br><br>
-    <input type="password" id="password" placeholder="Enter Password"><br><br>
+    <!-- Navigation Buttons -->
+    <button onclick="window.location.href='login.html'">Login</button>
+    <button onclick="window.location.href='register.html'">Register</button>
 
-    <button onclick="login()">Login</button>
+    <h2>Welcome to our Digital Library</h2>
+    <p>Click the button to view subjects</p>
 
-    <p style="margin-top:10px;">
-        <a href="#">Forgot Password?</a>
-    </p>
+    <button onclick="showBooks()">View Subjects</button>
 
-    <p>
-        Don't have an account?
-        <a href="register.html">Register here</a>
-    </p>
+    <div id="books" style="margin-top:20px;"></div>
 
-    <p id="error" style="color:red;"></p>
 </div>
 
 <script>
-function login() {
-    var contact = document.getElementById("contact").value;
-    var password = document.getElementById("password").value;
+function showBooks() {
+    document.getElementById("books").innerHTML =
+        "🧪 Chemistry<br>" +
+        "🧲 Physics<br>" +
+        "🧬 Biology<br>" +
+        "💻 Computer Studies<br>" +
+        "📖 English<br>" +
+        "📐 Mathematics<br>" +
+        "🌍 Geography<br>" +
+        "🤝 Life Skills<br>" +
+        "🇲🇼 Chichewa<br>" +
+        "💡 Social Studies<br>" +
+        "⏳ History";
+}
+</script>
 
-    var savedUser = JSON.parse(localStorage.getItem("user"));
-
-    if(savedUser && contact === savedUser.contact && password === saved
+</body>
+</html>
