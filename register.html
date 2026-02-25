@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Adama Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account 📝</h2>
+
+    <input type="text" id="fullname" placeholder="Full Name"><br><br>
+    <input type="text" id="contact" placeholder="Email or Phone"><br><br>
+    <input type="date" id="dob"><br><br>
+
+    <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select><br><br>
+
+    <input type="password" id="password" placeholder="Password"><br><br>
+
+    <button onclick="register()">Register</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function register() {
+    var fullname = document.getElementById("fullname").value;
+    var contact = document.getElementById("contact").value;
+    var password = document.getElementById("password").value;
+
+    if(fullname === "" || contact === "" || password === ""){
+        document.getElementById("message").innerText = "Please fill all fields!";
+        return;
+    }
+
+    var user = {
+        fullname: fullname,
+        contact: contact,
+        password: password
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
+    document.getElementById("message").style.color = "lightgreen";
+    document.getElementById("message").innerText = "Registration successful! Go to Login.";
+}
+</script>
+
+</body>
+  </html>
