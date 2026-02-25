@@ -9,7 +9,9 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* HEADER */
@@ -19,11 +21,17 @@ header {
     color: white;
     font-size: 26px;
     font-weight: bold;
+    text-align: center;
 }
 
-/* MAIN CONTENT */
+/* MAIN CENTERED */
 main {
-    margin-top: 60px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* BUTTONS */
@@ -45,7 +53,7 @@ button:hover {
 
 /* HEADINGS */
 h1 {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 30px;
     color: #333;
 }
@@ -59,7 +67,7 @@ p {
 
 /* FORM STYLING */
 form {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 input, select {
@@ -71,7 +79,7 @@ input, select {
     font-size: 16px;
 }
 
-/* LINK STYLE (Forgot password) */
+/* LINK STYLE */
 a {
     display: block;
     margin-top: 10px;
@@ -82,4 +90,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
+    }
