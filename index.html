@@ -2,9 +2,38 @@
 <html>
 <head>
     <title>Adama Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Adama Library 📚</h1>
-    <p>This website is now live!</p>
+
+<header>
+    <h1>Adama Library 📚</h1>
+</header>
+
+<div class="container">
+    <h2>Welcome to our Digital Library</h2>
+    <p>Click the button to view subjects</p>
+    <button onclick="showBooks()">View Subjects</button>
+
+    <div id="books" style="margin-top:20px;"></div>
+</div>
+
+<script>
+function showBooks() {
+    document.getElementById("books").innerHTML =
+        "🧪 Chemistry<br>" +
+        "🧲 Physics<br>" +
+        "🧬 Biology<br>" +
+        "💻 Computer Studies<br>" +
+        "📖 English<br>" +
+        "📐 Mathematics<br>" +
+        "🌐 Geography<br>" +
+        "🤝 Life Skills<br>" +
+        "🇲🇼 Chichewa<br>" +
+        "💡 Social Studies" +
+        "⏳️ History<br>" ;
+}
+</script>
+
 </body>
 </html>
