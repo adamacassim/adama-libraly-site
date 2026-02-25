@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Adama Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login 🔐</h2>
+
+    <input type="text" id="contact" placeholder="Enter Email or Phone"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p style="margin-top:10px;">
+        <a href="#">Forgot Password?</a>
+    </p>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">Register here</a>
+    </p>
+
+    <p id="error" style="color:red;"></p>
+</div>
+
+<script>
+function login() {
+    var contact = document.getElementById("contact").value;
+    var password = document.getElementById("password").value;
+
+    var savedUser = JSON.parse(localStorage.getItem("user"));
+
+    if(savedUser && contact === savedUser.contact && password === saved
